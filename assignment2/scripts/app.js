@@ -30,7 +30,7 @@
             {name: "cookies", quantity: 10},
             {name: "chips", quantity: 10},
             {name: "coke", quantity: 10},
-            {name: "cread", quantity: 1},
+            {name: "bread", quantity: 1},
             {name: "cheeze", quantity: 1},
             {name: "candies", quantity: 10}
         ];
