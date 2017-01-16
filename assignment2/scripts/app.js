@@ -15,15 +15,13 @@
         tbCtrl.checkOff = function(index) {
             ShoppingListCheckOffService.checkOff(index);
         }
-    };
+    }
     
     AlreadyBoughtController.$inject= ['ShoppingListCheckOffService'];
     function AlreadyBoughtController(ShoppingListCheckOffService) {
         var abCtrl = this;
         abCtrl.items = ShoppingListCheckOffService.getBoughtItems();
-        
-        abCtrl.check = abCtrl.items.length === 0;
-    };
+    }
 
     function ShoppingListCheckOffService() {
         var service = this;
@@ -37,18 +35,18 @@
             {name: "candies", quantity: 10}
         ];
     
-        service.getToBuyItems = function() {
+        service.getToBuyItems = function () {
             return toBuyItems;  
         };
         
-        service.getBoughtItems = function() {
+        service.getBoughtItems = function () {
             return boughtItems;
         };
         
-        service.checkOff = function(index) {
+        service.checkOff = function (index) {
             boughtItems.push(toBuyItems[index]);
             toBuyItems.splice(index, 1);
         };
-    };
+    }
     
 })();
